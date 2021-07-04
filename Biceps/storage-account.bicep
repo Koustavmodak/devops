@@ -1,6 +1,6 @@
 
 resource mystorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
-  name: 'bicepstorageaccount'
+  name: 'bicepstorageaccount${resourceGroup().id}'
   location: resourceGroup().location
   sku: {
     name: 'Standard_LRS'
